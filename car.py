@@ -1,6 +1,6 @@
 class Car:
 
-    def __init__ (carObj, make, model, year, color):
+    def __init__(carObj, make, model, year, color):
         carObj.make = make
         carObj.model = model
         carObj.year = year
@@ -14,22 +14,20 @@ class Car:
         print("Car make is : " + car.make)
 
     def printModel(car):
-        print("Car model is : " + car.make)
+        print("Car model is : " + car.model)
 
     def printYear(car):
-        print("Car year is : " + str( car.year))
+        print("Car year is : " + str(car.year))
 
     def printColor(car):
         print("Car color is : " + car.color)
 
     def printProperties(car):
+
         print("Car make is : " + car.make)
-        print("Car model is : " + car.make)
-        print("Car year is : " + str( car.year))
+        print("Car model is : " + car.model)
+        print("Car year is : " + str(car.year))
         print("Car color is : " + car.color)
-        print("Car mileage is : " + str(car.mileage))
 
     def getCurMileage(car):
         return str(car.mileage)
-#car1 = Car("Toyota", "Corolla", 2003, "Grey")
-#car1.printProperties()
