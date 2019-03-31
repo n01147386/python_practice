@@ -1,5 +1,3 @@
-
-#print user 4 modes (sum, substract, multiply, divide)
 print("Choose the function you want to use")
 print("1 for Addition")
 print("2 for Subtraction")
@@ -9,25 +7,47 @@ print("4 for Division")
 # input 
 inputMode = str(input()) 
 
-def addition(num1, num2):
-    sum = num1 + num2 
+argOne = 0
+argTwo = 0
+
+def promptForNumbers():
+    print("Enter the first number")
+    global argOne
+    argOne = int(input())
+    print("Enter the second number")
+    global argTwo 
+    argTwo = int(input())
+
+def addition():
+    sum = argOne + argTwo
     return str(sum)
+
+def subtraction():
+    val = argOne - argTwo
+    return str(val)
+
+def multiplication():
+    val = argOne * argTwo
+    return str(val)
+
+def division():
+    val = argOne / argTwo
+    return str(val)
 
 def presentOptions():
     #print("You chose : " + inString)
     if (inputMode == "1"):
-        #print("You chose 1")
-        print("Enter the first number")
-        argOne = int(input())
-        print("Enter the second number")
-        argTwo = int(input())
-        print("The sum is : " + addition(argOne,argTwo))
+        promptForNumbers()
+        print("The answer is : " + addition())
     elif (inputMode == "2"):
-        print("You chose 2")
+        promptForNumbers()
+        print("The answer is : " + subtraction())
     elif (inputMode == "3"):
-        print("You chose 3")
+        promptForNumbers()
+        print("The answer is : " + multiplication())
     elif (inputMode == "4"):
-        print("You chose 4")
+        promptForNumbers()
+        print("The answer is : " + division())
     else : print ("You chose invalid option")
 
 
